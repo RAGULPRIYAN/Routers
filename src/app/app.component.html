@@ -1,0 +1,42 @@
+<!-- <h1>ROUTING</h1> -->
+
+<!-- <div>
+<a href="employee/">EMPLOYEE</a>
+
+</div>
+<div>
+<a href="company/">COMPANY</a>
+</div>
+<div>
+    <a href="office/">
+OFFICE
+    </a>
+</div> -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary colors">
+    <div class="container-fluid">
+     <h1>ROUTING</h1>
+      <div class="collapse navbar-collapse navlast" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active hovers" aria-current="page" routerLink="employee/" >EMPLOYEE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active hovers" routerLink="company/">COMPANY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active hovers" routerLink="office/">OFFICE</a>
+          </li>
+          
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+  <select class="drops"  #selectOption (change)="dropChange(selectOption.value)">
+    <option value="" selected disabled>Select</option>
+    <option value="employee">Employee</option>
+    <option value="company">Company</option>
+    <option value="office">Office</option>
+  </select>
+  
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+<p>detailed1 works!</p>
+<div *ngIf="getbyemployeeid">
+    <ul class="card liststyle">
+      <li>{{ getbyemployeeid[0].name }}</li>
+      <li>{{ getbyemployeeid[0].age }}</li>
+      <li>{{ getbyemployeeid[0].gender }}</li>
+      
+    </ul>
+  </div>
+  <table *ngIf="getbyemployeeid">
+    <tr>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>GENDER</th>
+     
+    </tr>
+    <tr >
+      <td>{{getbyemployeeid[0].name}}</td>
+      <td>{{getbyemployeeid[0].age}}</td>
+      <td>{{getbyemployeeid[0].gender}}</td>
+     
+    </tr>
+  </table>
+  
+  

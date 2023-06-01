@@ -1,0 +1,21 @@
+<p>detailed3 works!</p>
+<ul class="card liststyle" *ngFor="let e of officeid">
+    <li>{{e.ownername}}</li>
+    <li>{{e.age}}</li>
+    <li>{{e.salary}}</li>
+    <li>{{e.location}}</li>
+</ul>
+<table *ngIf="officeid">
+    <tr>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>SALARY</th>
+      <th>LOCATION</th>
+    </tr>
+    <tr >
+      <td>{{officeid[0].ownername}}</td>
+      <td>{{officeid[0].age}}</td>
+      <td>{{officeid[0].salary}}</td>
+      <td>{{officeid[0].location}}</td>
+    </tr>
+  </table>

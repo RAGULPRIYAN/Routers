@@ -1,0 +1,31 @@
+<p>detailed works!</p>
+<div *ngIf="getbyid">
+    <ul>
+      <li>{{ getbyid.name }}</li>
+      <li>{{ getbyid.email }}</li>
+      <li>{{ getbyid.phonenumber }}</li>
+      <li>{{ getbyid.location }}</li>
+    </ul>
+  </div>
+  <!-- this is another method  -->
+  <!-- <ul class="card liststyle" *ngFor="let e of getbyid">
+    <li>{{e.name}}</li>
+    <li>{{e.email}}</li>
+    <li>{{e.phonenumber}}</li>
+    <li>{{e.location}}</li>
+  </ul> -->
+  
+<table *ngIf="getbyid">
+  <tr>
+    <th>NAME</th>
+    <th>EMAIL</th>
+    <th>NUMBER</th>
+    <th>LOCATION</th>
+  </tr>
+  <tr >
+    <td>{{getbyid.name}}</td>
+    <td>{{getbyid.email}}</td>
+    <td>{{getbyid.phonenumber}}</td>
+    <td>{{getbyid.location}}</td>
+  </tr>
+</table>

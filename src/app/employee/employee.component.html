@@ -1,0 +1,89 @@
+<p>employee works!</p>
+
+<div class="card">
+    <div class="row ">
+        <div class="col-6 ">
+            <h1>Employee form</h1>
+            <form class="card formstyle" id="my-form">
+                <div class="row">
+                    <div class=" mt-5 col-4">
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class=" mt-5 col-8">
+                        <input type="text" [(ngModel)]="name" name="name" required>
+
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" mt-5 col-4">
+                        <label for="age">Age:</label>
+                    </div>
+                    <div class="mt-5 col-8">
+                        <input type="text" [(ngModel)]="age" name="age" required>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" mt-5 col-4">
+                        <label for="gender">Gender:</label>
+                    </div>
+                    <div class="mt-5 col-8">
+                        <select class="drops" [(ngModel)]="gender" name="gender" required>
+                          <option value="" disabled selected>Select gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      
+                </div>
+
+                <div class="row">
+                    <div class="mt-5 col-4 "></div>
+                    <div class="mt-5 col-8">
+                        <button type="button" class="btn" *ngIf="submitVisible" (click)="createUser()">Create</button>
+
+                        <button type="button" class="btn" *ngIf="updateVisible" (click)="updateUser()">Update</button>
+                    </div>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+        <div class="col-6 table-container">
+
+            <table class="scrollable-table">
+                <tr>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>Action</th>
+
+
+                </tr>
+                <tr *ngFor="let e of getallemployee">
+                    <td (click)="listview(e.id)">{{e.name}}</td>
+                    <td>{{e.age}}</td>
+                    <td>{{e.gender}}</td>
+                    <td>
+
+                        <a class="pencil" (click)="editUser(e.id)"> <i class="bi bi-pencil-square"></i></a>
+                        <a (click)="deleteUser(e.id)"> <i class="bi bi-trash"></i></a>
+
+                    </td>
+
+
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- <table >
+   
+</table> -->

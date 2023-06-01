@@ -1,0 +1,45 @@
+.table-container {
+    max-height: 500px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+  }
+  
+  
+  
+  .scrollable-table  {
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9; /* Adjust the background color as needed */
+    z-index: 1;
+  }
+  
+  table {
+   
+      border-collapse: separate;
+      width: 100%;
+      border: 1px solid black;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid black;
+    }
+    
+    tr:nth-child(even) {
+      background-color: wheat;
+    }
+    .stylish{
+        color: rebeccapurple;
+    }
+    .btn{
+        background-color: red;
+      }
+      .btn:hover{
+        background-color: blueviolet;
+      }
+      .pencil{
+        padding: 10px;
+      }
+      .drops{
+      width: auto;
+      }
